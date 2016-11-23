@@ -34,11 +34,13 @@ public class RequestBodyTest {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/getString", method = RequestMethod.GET)
-	public String acceptString(
+	public Object acceptString(
 			@RequestParam("userName") String userName,
 			@RequestParam("password") String pwd) {
 		System.out.println(userName + " ：" + pwd);
-		return "success getString";
+		Map<String,String> resultMap = new HashMap<String,String>();
+		resultMap.put(userName, pwd);
+		return resultMap;
 	}
 
 	/**

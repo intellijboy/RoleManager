@@ -80,18 +80,15 @@
 		
 		function bindGetStringEvent(){
 			console.log("字符串");
-			var user = new Object();
+			var user = new Object();//JSON对象
 			user.userName = "刘卜铷";
 			user.password = "123456"
-			var jsonStrData = JSON.stringify(user);
-			console.log(jsonStrData);
+			var jsonStrData = JSON.stringify(user);//JSON字符串
+	//		console.log(jsonStrData);
 			$.ajax({
 				type : "get",
 				url : "demo/getString",
-				data:{
-					"userName":"刘卜铷",
-					"password":"123456"
-					},
+				data:user,
 				 dataType:"json",      
 		         contentType:"application/json",  
 				success : function(data) {
