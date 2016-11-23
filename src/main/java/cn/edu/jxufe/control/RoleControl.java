@@ -4,9 +4,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -211,12 +214,14 @@ public class RoleControl {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
+	@ResponseBody
+	@RequestMapping("/user/add")
+	public Object addUser(@RequestBody User user){
+		int insertRow = userDao.insertSelective(user);
+		Map<String,String> resultMap = new HashMap<>();
+		resultMap.put("status", String.valueOf(insertRow));
+		return resultMap;
+	}
 	
 	
 }
