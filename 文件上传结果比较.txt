@@ -1,0 +1,11 @@
+1.SpringMVC三种上传
+第一种：
+{"wastTime":"81ms","fm727chb174_7.2.7.174_build_setup.exe":"success"}32.3M
+
+第二种：
+{"wastTime":"24ms","status":"success"} 32.3M
+{"wastTime":"57ms","status":"success"}32.3M+36.3M
+
+第三种：
+{"wastTime":"25ms","D:/fileUpload":"success"} 32.3M
+  {"wastTime":"78ms","D:/fileUpload":"success"}32.3M+36.3M

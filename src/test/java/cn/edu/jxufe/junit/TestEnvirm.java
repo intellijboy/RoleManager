@@ -1,15 +1,28 @@
 package cn.edu.jxufe.junit;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
-
-import com.alibaba.fastjson.JSON;
 
 import cn.edu.jxufe.entity.User;
 
 public class TestEnvirm {
 		public static void main(String[] args) {
-			User user = generateUserEntity();
-			System.out.println(JSON.toJSON(user));
+			getMyList();
+		}
+		
+		public static void getMyList(){
+			List<String> list = new ArrayList<String>();
+			list.add("test1");
+			list.add("test2");
+			list.add("test3");
+			list.add("test4");
+			list.add("test5");
+			Iterator<String> iterator = list.iterator();
+			while(iterator.hasNext()){
+				System.out.println(iterator.next());
+			}
 		}
 		
 		public static User generateUserEntity(){
