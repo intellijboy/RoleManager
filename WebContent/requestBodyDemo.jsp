@@ -14,7 +14,6 @@
 	<button id="entitysBtn">多个对象</button>
 	<button id="jsonBtn">Json</button>
 	<button id="putDelBtn">Ajax测试PUT请求</button>
-	
 	<form action="demo/requestParam" method="post">
     <input type="hidden" name="_method" value="PUT">
     <input type="text" name="name" value="liuburu">
