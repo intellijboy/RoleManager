@@ -11,3 +11,4 @@
   {"wastTime":"78ms","D:/fileUpload":"success"}32.3M+36.3M
 
 第四种：
+设置信息
